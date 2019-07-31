@@ -41,7 +41,7 @@ class Content extends \yii\db\ActiveRecord
         ],
             [['userId'], 'integer'],
             [['file'], 'file','extensions' => 'png, jpg,doc, docx,pdf'],
-            // [['file'], 'file',  'extensions' => 'doc, docx, jpeg, png ,pdf','maxFiles' => 5],
+        
         ];
     }
 

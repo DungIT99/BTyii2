@@ -135,8 +135,6 @@ class ContentController extends Controller
                    
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
-
-
                 if($model->file){
                     $model->file->saveAs('public/'. $model->file->name);
                 //    echo $model->file;die;

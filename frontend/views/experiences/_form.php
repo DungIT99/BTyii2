@@ -10,9 +10,9 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
 
-    <?= $form->field($model, 'start_at')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'start_at')->textInput(['maxlength' => true,'class'=>'date']) ?>
 
-    <?= $form->field($model, 'end_at')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'end_at')->textInput(['maxlength' => true,'class'=>'date']) ?>
 
     <?= $form->field($model, 'namecompany')->textInput(['maxlength' => true]) ?>
 
