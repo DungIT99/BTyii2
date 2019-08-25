@@ -16,9 +16,10 @@ class AppAsset extends AssetBundle
 'css/jquery-ui.css'
     ];
     public $js = [
-        'vendor/jquery/jquery-3.2.1.min.js',
+   
         'js/jquery-ui.js',
-        'js/picker.js'
+        'js/picker.js',
+        'js/content.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

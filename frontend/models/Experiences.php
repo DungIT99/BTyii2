@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+
 use Yii;
 
 /**
@@ -33,7 +34,16 @@ class Experiences extends \yii\db\ActiveRecord
             [['userId', 'start_at', 'end_at', 'namecompany', 'aboutjob'], 'required'],
             [['userId'], 'integer'],
             [['start_at', 'end_at', 'namecompany', 'aboutjob'], 'string', 'max' => 255],
+            ['start_at','checkDate'],
         ];
+    }
+    public function checkDate($attribute,$param){
+            $today = date('y-m-d');
+            $selectedDate = date($this->start_at);
+            if($selectedDate > $today){
+                $this->addError($attribute,"start date must be smaller");
+            }
+            
     }
 
     /**

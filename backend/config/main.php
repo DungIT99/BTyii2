@@ -60,6 +60,9 @@ return [
             'rules' => [
             ],
         ],
+        'components'=>[
+           'class' =>  'backend\components\MyComponents',
+        ]
         
     ],
     'params' => $params,

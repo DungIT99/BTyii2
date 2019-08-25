@@ -15,10 +15,15 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.14",
-        "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
-        "yiisoft/yii2-authclient": "^2.2"
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "kartik-v/yii2-mpdf":"dev-master",
+        "kartik-v/yii2-export": "@dev",
+        "philippfrenzel/yii2fullcalendar":"*",
+        "wbraganca/yii2-dynamicform": "dev-master",
+        "perminder-klair/yii2-dropzone": "dev-master",
+        "moonlandsoft/yii2-tinymce": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

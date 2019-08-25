@@ -19,14 +19,15 @@ use yii\widgets\ActiveForm;
 
   
     <?= $form->field($model, 'file')->fileInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'description')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success','id'=>'saveContent']) ?>
     </div>
-
+    
     <?php ActiveForm::end(); ?>
 
 </div>
 </div>
+
+

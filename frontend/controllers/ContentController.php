@@ -93,8 +93,8 @@ class ContentController extends Controller
     public function actionCreate()
     {
  
-        $model = new content();
-    if ($model->load(Yii::$app->request->post())) {
+            $model = new content();
+        if ($model->load(Yii::$app->request->post())) {
     
         $model->userId = Yii::$app->User->identity->id;
         $model->file =  UploadedFile::getInstance($model, 'file');
@@ -110,9 +110,12 @@ class ContentController extends Controller
 
 
     }
-    return $this->render('create', [
+    return $this->renderAjax('create', [
         'model' => $model,
     ]);
+    // return $this->render('create', [
+    //     'model' => $model,
+    // ]);
 }
 
     /**

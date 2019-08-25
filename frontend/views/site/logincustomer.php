@@ -26,11 +26,8 @@ $this->title = 'Login';
   
   <div class="right">
     <span class="loginwith">Sign in with<br />social network</span>
-    
-    <?=yii\authclient\widgets\AuthChoice::widget([
-    'baseAuthUrl'=>['site/auth']
-      ]);
-      ?>
+  
+
   </div>
   <div class="or">OR</div>
   <?php ActiveForm::end(); ?>

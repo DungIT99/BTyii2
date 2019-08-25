@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 <div class="container" >
 <div class="experiences-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([ 'enableAjaxValidation' => true,]); ?>
 
 
     <?= $form->field($model, 'start_at')->textInput(['maxlength' => true,'class'=>'date']) ?>

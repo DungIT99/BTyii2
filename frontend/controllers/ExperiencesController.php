@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
+
 /**
  * ExperiencesController implements the CRUD actions for Experiences model.
  */
@@ -96,6 +97,11 @@ class ExperiencesController extends Controller
     public function actionCreate()
     {
         $model = new Experiences();
+        if(Yii::$app->request->isAjax && $mdoel->load($_POST)){
+            Yii::$app->response->request->format = "json";
+            return \yii2\widgets\Activeform::validate($model);
+
+        }
   
         $id = Yii::$app->User->identity->id;
     if ($model->load(Yii::$app->request->post())) {

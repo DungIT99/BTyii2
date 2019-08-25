@@ -60,6 +60,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        echo Yii::$app->components->hello();
         return $this->render('index');
     }
 
@@ -97,4 +98,26 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+    // public function actionCreateMPDF()
+    // {
+    //     $mpdf = new mPDF();
+    //     $mpdf->WriteHTML($this->renderPartial('mpdf'));
+    //     $mpdf->Output();
+    //     exit;
+    //     return $this->renderPartial('mpdf');
+    // }
+    // public function actionSamplePdf()
+    // {
+    //     $mpdf = new mPDF;
+    //     $mpdf->WriteHTML('Sample Text');
+    //     $mpdf->Output();
+    //     exit;
+    // }
+    // public function actionForceDownloadPdf()
+    // {
+    //     $mpdf = new mPDF();
+    //     $mpdf->WriteHTML($this->renderPartial('mpdf'));
+    //     $mpdf->Output('MyPDF.pdf', 'D');
+    //     exit;
+    // }
 }
